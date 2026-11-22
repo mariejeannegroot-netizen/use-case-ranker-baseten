@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
     const response = await fetch("https://inference.baseten.co/v1/systemone", {
       method: "POST",
       headers: {
-        Authorization: `Api-Key ${process.env.BASETEN_API_KEY}`,
+        Authorization: `Bearer ${process.env.BASETEN_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
